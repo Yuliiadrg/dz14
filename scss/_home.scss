@@ -1,0 +1,191 @@
+@use "variables";
+
+.sub-title,
+.team-title {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.sub-title {
+  font-family: 'Raleway500';
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: $main-title;
+  margin-bottom: 15px;
+}
+
+.team-title {
+  font: 60px / 1.1 $titleCapital;
+  text-transform: uppercase;
+  color: $sub-title;
+}
+
+.img-box {
+  margin: 40px 0px;
+
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.bg-img {
+  position: relative;
+  width: 420px;
+  height: 420px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__corner {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+
+    &--topleft {
+      top: 0;
+      left: 0;
+      border-top: 1px solid $sub-title;
+      border-left: 1px solid $sub-title;
+    }
+
+    &--topright {
+      top: 0;
+      right: 0;
+      border-top: 1px solid $sub-title;
+      border-right: 1px solid $sub-title;
+    }
+
+    &--bottomleft {
+      bottom: 0;
+      left: 0;
+      border-bottom: 1px solid $sub-title;
+      border-left: 1px solid $sub-title;
+    }
+
+    &--bottomright {
+      bottom: 0;
+      right: 0;
+      border-bottom: $sub-title 1px solid;
+      border-right: $sub-title 1px solid;
+    }
+  }
+}
+
+.text-box {
+  max-width: 420px;
+  width: 100%;
+}
+
+.name-title {
+  font-family: 'Roboto900';
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  text-transform: capitalize;
+  color: $button;
+  margin-bottom: 60px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100px;
+    height: 1px;
+    background-color: $sub-title;
+    top: 70px;
+    left: 170px;
+  }
+}
+
+.description-text {
+  font-family: 'Raleway400';
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: capitalize;
+  color: $button;
+}
+
+.social-list {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 49px;
+
+  .list-link {
+    display: block;
+    background: #ffffff;
+    width: 30px;
+    height: 30px;
+    border: 2px solid $link;
+    border-radius: 50%;
+    fill: $link;
+    position: relative;
+    transition: all 0.5s;
+
+    &:hover {
+      fill: $sub-title;
+      border: 2px solid $sub-title;
+      background-color: #FDE688;
+    }
+
+    svg {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+      content: "";
+    }
+  }
+}
+
+.text-box {
+  p {
+    font-family: 'Raleway500';
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    color: $text;
+  }
+
+  & img {
+    display: block;
+    margin: 25px auto;
+  }
+
+  button {
+    display: block;
+    margin: 0 auto;
+    border: 1px solid $sub-title;
+    background-color: inherit;
+    padding: 5px 10px;
+    font-family: 'OpenSans';
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $button;
+    cursor: pointer;
+    transition: all 0.5s;
+
+    &:hover {
+      color: $button;
+      border: 1px solid $sub-title;
+      background-color: $sub-title;
+    }
+  }
+
+  .description-text {
+    font-family: 'Raleway400';
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    text-transform: capitalize;
+    color: $button;
+  }
+}
